@@ -1,17 +1,14 @@
 # Searching Algorithms (AI project 1)
-
-Jackson Mishuk
  
 The file Search.java contains all of the necessary code.
 
-If you understand the assignment then read at least the section about verbosity levels, as it is the only part that has been slightly tweaked from the instruction pdf. 
-Otherwise read the whole thing for information about the different flags used on the command line that can be used and for the required format of the file.
+## Summary
 
 This program allows you to give an input file with locations and distances between some pairs of cities.  
 
 From that point, using the initial location and the goal location parameters, the program solves for the path that a search algorithm(chosen by the user) thinks is the best
 
-## Command Line Arguements
+### Command Line Arguements
 
 -f(File Location)*, -i(Initial City)*, -g(Goal City)*, -v(Verbosity Level), -s(Search Algorithm), -h(Heuristic Function) and, --no-reached(Disables reached table)
 
@@ -54,5 +51,5 @@ La Crescent, Minneapolis, 142.0
 Winona, Minneapolis, 116.0
 
 
-
+Author: Jackson Mishuk
  
