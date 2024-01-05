@@ -40,12 +40,12 @@ The input file must be a csv file includes cities (along with corrdinates) and p
 
 Example file:
 
-# Cities: name, latitude, longitude
+/# Cities: name, latitude, longitude
 La Crosse, 43.8, -91.24
 La Crescent, 43.83, -91.3
 Winona, 44.06, -91.67
 Minneapolis, 44.98, -93.27
-# Distances: name1, name2, distance
+/# Distances: name1, name2, distance
 La Crosse, La Crescent, 5.0
 La Crosse, Winona, 31.6
 La Crescent, Winona, 27.5
