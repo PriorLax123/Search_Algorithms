@@ -1,0 +1,123 @@
+===============================================================================
+shell$ java Search -f ../a01-data/cities01.csv -i "La Crosse" -g Minneapolis -v 3 -s a-star
+* Reading data from [../a01-data/cities01.csv]
+* Number of cities: 4
+* Searching for path from La Crosse to Minneapolis using A-Star Search
+  Expanding   : La Crosse    (p-> null)         [f= 129.2; g=   0.0; h= 129.2]
+    Adding    : Winona       (p-> La Crosse)    [f= 132.9; g=  31.6; h= 101.3]
+    Adding    : La Crescent  (p-> La Crosse)    [f= 130.6; g=   5.0; h= 125.6]
+  Expanding   : La Crescent  (p-> La Crosse)    [f= 130.6; g=   5.0; h= 125.6]
+    Adding    : Minneapolis  (p-> La Crescent)  [f= 147.0; g= 147.0; h=   0.0]
+    NOT adding: Winona       (p-> La Crescent)  [f= 133.8; g=  32.5; h= 101.3]
+    NOT adding: La Crosse    (p-> La Crescent)  [f= 139.2; g=  10.0; h= 129.2]
+  Expanding   : Winona       (p-> La Crosse)    [f= 132.9; g=  31.6; h= 101.3]
+    NOT adding: Minneapolis  (p-> Winona)       [f= 147.6; g= 147.6; h=   0.0]
+    NOT adding: La Crescent  (p-> Winona)       [f= 184.7; g=  59.1; h= 125.6]
+    NOT adding: La Crosse    (p-> Winona)       [f= 192.4; g=  63.2; h= 129.2]
+  Expanding   : Minneapolis  (p-> La Crescent)  [f= 147.0; g= 147.0; h=   0.0]
+* Goal found  : Minneapolis  (p-> La Crescent)  [f= 147.0; g= 147.0; h=   0.0]
+* Search took 11ms
+
+Route found: La Crosse -> La Crescent -> Minneapolis
+Distance: 147.0
+
+Total nodes generated      : 4
+Nodes remaining on frontier: 0
+
+===============================================================================
+shell$ java Search -f ../a01-data/cities01.csv -g "La Crosse" -i Minneapolis -v 3 -s a-star
+* Reading data from [../a01-data/cities01.csv]
+* Number of cities: 4
+* Searching for path from Minneapolis to La Crosse using A-Star Search
+  Expanding   : Minneapolis  (p-> null)         [f= 129.2; g=   0.0; h= 129.2]
+    Adding    : Winona       (p-> Minneapolis)  [f= 143.9; g= 116.0; h=  27.9]
+    Adding    : La Crescent  (p-> Minneapolis)  [f= 145.6; g= 142.0; h=   3.6]
+  Expanding   : Winona       (p-> Minneapolis)  [f= 143.9; g= 116.0; h=  27.9]
+    NOT adding: Minneapolis  (p-> Winona)       [f= 361.2; g= 232.0; h= 129.2]
+    NOT adding: La Crescent  (p-> Winona)       [f= 147.1; g= 143.5; h=   3.6]
+    Adding    : La Crosse    (p-> Winona)       [f= 147.6; g= 147.6; h=   0.0]
+  Expanding   : La Crescent  (p-> Minneapolis)  [f= 145.6; g= 142.0; h=   3.6]
+    NOT adding: Minneapolis  (p-> La Crescent)  [f= 413.2; g= 284.0; h= 129.2]
+    NOT adding: Winona       (p-> La Crescent)  [f= 197.4; g= 169.5; h=  27.9]
+    Adding    : La Crosse    (p-> La Crescent)  [f= 147.0; g= 147.0; h=   0.0]
+  Expanding   : La Crosse    (p-> La Crescent)  [f= 147.0; g= 147.0; h=   0.0]
+* Goal found  : La Crosse    (p-> La Crescent)  [f= 147.0; g= 147.0; h=   0.0]
+* Search took 10ms
+
+Route found: Minneapolis -> La Crescent -> La Crosse
+Distance: 147.0
+
+Total nodes generated      : 5
+Nodes remaining on frontier: 1
+
+===============================================================================
+shell$ java Search -f ../a01-data/cities01.csv -i "La Crosse" -g Minneapolis --no-reached -v 3 -s a-star
+* Reading data from [../a01-data/cities01.csv]
+* Number of cities: 4
+* Searching for path from La Crosse to Minneapolis using A-Star Search
+  Expanding   : La Crosse    (p-> null)         [f= 129.2; g=   0.0; h= 129.2]
+    Adding    : Winona       (p-> La Crosse)    [f= 132.9; g=  31.6; h= 101.3]
+    Adding    : La Crescent  (p-> La Crosse)    [f= 130.6; g=   5.0; h= 125.6]
+  Expanding   : La Crescent  (p-> La Crosse)    [f= 130.6; g=   5.0; h= 125.6]
+    Adding    : Minneapolis  (p-> La Crescent)  [f= 147.0; g= 147.0; h=   0.0]
+    Adding    : Winona       (p-> La Crescent)  [f= 133.8; g=  32.5; h= 101.3]
+    Adding    : La Crosse    (p-> La Crescent)  [f= 139.2; g=  10.0; h= 129.2]
+  Expanding   : Winona       (p-> La Crosse)    [f= 132.9; g=  31.6; h= 101.3]
+    Adding    : Minneapolis  (p-> Winona)       [f= 147.6; g= 147.6; h=   0.0]
+    Adding    : La Crescent  (p-> Winona)       [f= 184.7; g=  59.1; h= 125.6]
+    Adding    : La Crosse    (p-> Winona)       [f= 192.4; g=  63.2; h= 129.2]
+  Expanding   : Winona       (p-> La Crescent)  [f= 133.8; g=  32.5; h= 101.3]
+    Adding    : Minneapolis  (p-> Winona)       [f= 148.5; g= 148.5; h=   0.0]
+    Adding    : La Crescent  (p-> Winona)       [f= 185.6; g=  60.0; h= 125.6]
+    Adding    : La Crosse    (p-> Winona)       [f= 193.3; g=  64.1; h= 129.2]
+  Expanding   : La Crosse    (p-> La Crescent)  [f= 139.2; g=  10.0; h= 129.2]
+    Adding    : Winona       (p-> La Crosse)    [f= 142.9; g=  41.6; h= 101.3]
+    Adding    : La Crescent  (p-> La Crosse)    [f= 140.6; g=  15.0; h= 125.6]
+  Expanding   : La Crescent  (p-> La Crosse)    [f= 140.6; g=  15.0; h= 125.6]
+    Adding    : Minneapolis  (p-> La Crescent)  [f= 157.0; g= 157.0; h=   0.0]
+    Adding    : Winona       (p-> La Crescent)  [f= 143.8; g=  42.5; h= 101.3]
+    Adding    : La Crosse    (p-> La Crescent)  [f= 149.2; g=  20.0; h= 129.2]
+  Expanding   : Winona       (p-> La Crosse)    [f= 142.9; g=  41.6; h= 101.3]
+    Adding    : Minneapolis  (p-> Winona)       [f= 157.6; g= 157.6; h=   0.0]
+    Adding    : La Crescent  (p-> Winona)       [f= 194.7; g=  69.1; h= 125.6]
+    Adding    : La Crosse    (p-> Winona)       [f= 202.4; g=  73.2; h= 129.2]
+  Expanding   : Winona       (p-> La Crescent)  [f= 143.8; g=  42.5; h= 101.3]
+    Adding    : Minneapolis  (p-> Winona)       [f= 158.5; g= 158.5; h=   0.0]
+    Adding    : La Crescent  (p-> Winona)       [f= 195.6; g=  70.0; h= 125.6]
+    Adding    : La Crosse    (p-> Winona)       [f= 203.3; g=  74.1; h= 129.2]
+  Expanding   : Minneapolis  (p-> La Crescent)  [f= 147.0; g= 147.0; h=   0.0]
+* Goal found  : Minneapolis  (p-> La Crescent)  [f= 147.0; g= 147.0; h=   0.0]
+* Search took 17ms
+
+Route found: La Crosse -> La Crescent -> Minneapolis
+Distance: 147.0
+
+Total nodes generated      : 23
+Nodes remaining on frontier: 14
+
+===============================================================================
+shell$ java Search -f ../a01-data/cities01.csv -g "La Crosse" -i Minneapolis --no-reached -v 3 -s a-star
+* Reading data from [../a01-data/cities01.csv]
+* Number of cities: 4
+* Searching for path from Minneapolis to La Crosse using A-Star Search
+  Expanding   : Minneapolis  (p-> null)         [f= 129.2; g=   0.0; h= 129.2]
+    Adding    : Winona       (p-> Minneapolis)  [f= 143.9; g= 116.0; h=  27.9]
+    Adding    : La Crescent  (p-> Minneapolis)  [f= 145.6; g= 142.0; h=   3.6]
+  Expanding   : Winona       (p-> Minneapolis)  [f= 143.9; g= 116.0; h=  27.9]
+    Adding    : Minneapolis  (p-> Winona)       [f= 361.2; g= 232.0; h= 129.2]
+    Adding    : La Crescent  (p-> Winona)       [f= 147.1; g= 143.5; h=   3.6]
+    Adding    : La Crosse    (p-> Winona)       [f= 147.6; g= 147.6; h=   0.0]
+  Expanding   : La Crescent  (p-> Minneapolis)  [f= 145.6; g= 142.0; h=   3.6]
+    Adding    : Minneapolis  (p-> La Crescent)  [f= 413.2; g= 284.0; h= 129.2]
+    Adding    : Winona       (p-> La Crescent)  [f= 197.4; g= 169.5; h=  27.9]
+    Adding    : La Crosse    (p-> La Crescent)  [f= 147.0; g= 147.0; h=   0.0]
+  Expanding   : La Crosse    (p-> La Crescent)  [f= 147.0; g= 147.0; h=   0.0]
+* Goal found  : La Crosse    (p-> La Crescent)  [f= 147.0; g= 147.0; h=   0.0]
+* Search took 11ms
+
+Route found: Minneapolis -> La Crescent -> La Crosse
+Distance: 147.0
+
+Total nodes generated      : 9
+Nodes remaining on frontier: 5
+
