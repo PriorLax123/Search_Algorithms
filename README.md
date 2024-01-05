@@ -11,7 +11,7 @@ This program allows you to give an input file with locations and distances betwe
 
 From that point, using the initial location and the goal location parameters, the program solves for the path that a search algorithm(chosen by the user) thinks is the best
 
-##Command Line Arguements
+## Command Line Arguements
 
 -f(File Location)*, -i(Initial City)*, -g(Goal City)*, -v(Verbosity Level), -s(Search Algorithm), -h(Heuristic Function) and, --no-reached(Disables reached table)
 
