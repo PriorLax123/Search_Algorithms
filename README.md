@@ -3,7 +3,7 @@
 The file Search.java contains all of the necessary code.
 
 
-## Summary
+## What does the project do?
 
 This program allows you to give an input file with locations and distances between some pairs of cities.  
 
