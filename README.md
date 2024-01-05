@@ -5,7 +5,7 @@ The file Search.java contains all of the necessary code.
 
 ## What does the project do? 
 
-Using the initial location and the goal location parameters, the program solves for the path that a search algorithm(chosen by the user) thinks is the best based on an input file
+Using the initial location and the goal location parameters, the program solves for the path that a search algorithm(chosen by the user) thinks is the best based on locations of cities
 
 
 ## Command Line Arguements
