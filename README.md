@@ -35,7 +35,7 @@ EXAMPLE OF CMD ARGUEMENT: Java Search.java -i "Initial City" -f InputFile.csv -s
 
 **It is important to understand that verbosity levels 3-5 will have the same output
 
-The input file must be a csv file includes cities (along with corrdinates) and paths between cities. Both of these sections of the file are denoted by a comment that looks exactly like the comment shown in the example below.
+The input file must be a csv file includes cities (along with coordinates) and paths between cities. Both of these sections of the file are denoted by a comment that looks exactly like the comment shown in the example below.
 
 **NOTE: The file must look Exactly like this. Pay attention to spaces!
 
