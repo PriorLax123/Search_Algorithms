@@ -19,12 +19,12 @@ From that point, using the initial location and the goal location parameters, th
 
 EXAMPLE OF CMD ARGUEMENT: Java Search.java -i "Initial City" -f InputFile.csv -s "Search Algorithm" -h "Heuristic Function" --no-reached -v 4 -g "Goal City"
 
--f*:String of reference file
-
--i*:The string of the starting location(Must be contained in reference file)
-
--g*:The string of the goal location(Must be contained in reference file)
-
+-f*:String of reference file  
+-i*:The string of the starting location(Must be contained in reference file)  
+-g*:The string of the goal location(Must be contained in reference file)  
+-s :Search function {uniform, greedy, a-star(Default)}  
+-h	:The formula that will be used to come up with the heuristic{euclidean, haversine(Default)}  
+--no-reached: The search will not hold a reference of all cities that have been accessed and instead only search for cycles{defaults to reached table unless this command is added}  
 -v :The amount of information about the search that you want to display(Higher the number the more information that will display){0(Default), 1, 2, 3, 4, 5}
 
 *Verbosity level 3 prints outputs as something is happening (i.e. if a node is being added to the frontier, the output for the node being added will be printed and then the node would be added to the frotier).{This is best to use when there is an issue with a solution to debug, or if you need to know what is currently happening within the code}
@@ -34,10 +34,6 @@ EXAMPLE OF CMD ARGUEMENT: Java Search.java -i "Initial City" -f InputFile.csv -s
 *Verbosity level 5 prints outputs when after the solution (or an error) has been found(i.e. the output for a node being added to the frontier will be stored in the string builder to be printed when the solution is found).{This is the most efficient solution, and I would advise using it unless one of the criteria in verbosity levels 3 or 4 apply}
 
 **It is important to understand that verbosity levels 3-5 will have the same output
-
--s :Search function {uniform, greedy, a-star(Default)}
--h	:The formula that will be used to come up with the heuristic{euclidean, haversine(Default)}
---no-reached: The search will not hold a reference of all cities that have been accessed and instead only search for cycles{defaults to reached table unless this command is added}
 
 The input file must be a csv file includes cities (along with corrdinates) and paths between cities. Both of these sections of the file are denoted by a comment that looks exactly like the comment shown in the example below.
 
