@@ -11,16 +11,20 @@ This program allows you to give an input file with locations and distances betwe
 
 From that point, using the initial location and the goal location parameters, the program solves for the path that a search algorithm(chosen by the user) thinks is the best
 
-Command line arguments include: -f(File Location)*, -i(Initial City)*, -g(Goal City)*, -v(Verbosity Level), -s(Search Algorithm), -h(Heuristic Function) and, --no-reached(Disables reached table)
+##Command Line Arguements
+-f(File Location)*, -i(Initial City)*, -g(Goal City)*, -v(Verbosity Level), -s(Search Algorithm), -h(Heuristic Function) and, --no-reached(Disables reached table)
+
 **NOTE: All command line arguments marked with star are required**
 
 EXAMPLE OF CMD ARGUEMENT: Java Search.java -i "Initial City" -f InputFile.csv -s "Search Algorithm" -h "Heuristic Function" --no-reached -v 4 -g "Goal City"
 
 -f*:String of reference file
+
 -i*:The string of the starting location(Must be contained in reference file)
+
 -g*:The string of the goal location(Must be contained in reference file)
+
 -v :The amount of information about the search that you want to display(Higher the number the more information that will display){0(Default), 1, 2, 3, 4, 5}
-**NOTE about verbosity: I have added in verbosity levels 4 & 5 to account for different printing styles:
 
 *Verbosity level 3 prints outputs as something is happening (i.e. if a node is being added to the frontier, the output for the node being added will be printed and then the node would be added to the frotier).{This is best to use when there is an issue with a solution to debug, or if you need to know what is currently happening within the code}
 
