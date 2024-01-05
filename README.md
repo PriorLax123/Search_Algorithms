@@ -3,11 +3,9 @@
 The file Search.java contains all of the necessary code.
 
 
-## What does the project do?
+## What does the project do? 
 
-This program allows you to give an input file with locations and distances between some pairs of cities.  
-
-From that point, using the initial location and the goal location parameters, the program solves for the path that a search algorithm(chosen by the user) thinks is the best
+Using the initial location and the goal location parameters, the program solves for the path that a search algorithm(chosen by the user) thinks is the best based on an input file
 
 
 ## Command Line Arguements
