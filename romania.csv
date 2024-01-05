@@ -1,0 +1,45 @@
+# Cities: name, latitude, longitude
+Arad, 46.175, 21.313
+Bucharest, 44.433, 26.104
+Craiova, 44.333, 23.817
+Drobeta, 44.633, 22.650
+Eforie, 44.046, 28.644
+Fagaras, 45.845, 24.974
+Giurgiu, 43.901, 25.974
+Hirsova, 44.687, 27.950
+Iasi, 47.162, 27.589
+Lugoj, 45.706, 21.926
+Mehadia, 44.906, 22.365
+Neamt, 46.928, 26.384
+Oradea, 47.072, 21.921
+Pitesti, 44.861, 24.868
+Rimnicu Vilcea, 45.105, 24.376
+Sibiu, 45.793, 24.152
+Timisoara, 45.760, 21.230
+Urziceni, 44.718, 26.645
+Vaslui, 46.638, 27.729
+Zerind, 46.624, 21.517
+# Distances: name1, name2, distance
+Arad, Sibiu, 140
+Arad, Timisoara, 118
+Arad, Zerind, 75
+Bucharest, Fagaras, 211
+Bucharest, Giurgiu, 90
+Bucharest, Pitesti, 101
+Bucharest, Urziceni, 85
+Craiova, Drobeta, 120
+Craiova, Pitesti, 138
+Craiova, Rimnicu Vilcea, 146
+Drobeta, Mehadia, 75
+Eforie, Hirsova, 86
+Fagaras, Sibiu, 99
+Hirsova, Urziceni, 98
+Iasi, Neamt, 87
+Iasi, Vaslui, 92
+Lugoj, Mehadia, 70
+Lugoj, Timisoara, 111
+Oradea, Zerind, 71
+Oradea, Sibiu, 151
+Pitesti, Rimnicu Vilcea, 97
+Rimnicu Vilcea, Sibiu, 80
+Urziceni, Vaslui, 142
